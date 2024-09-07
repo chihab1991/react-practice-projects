@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="./src/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite + TS</title>
+	</head>
+	<body class="bg-slate-100">
+		<div
+			class="flex flex-col justify-center items-center min-h-screen w-[1000px] mx-auto"
+		>
+			<header class="bg-blue-300 min-w-full text-center">
+				<h1 class="text-3xl text-red-600">ID Card Generator</h1>
+			</header>
+			<main class="flex">
+				<form class="idCardGeneratorForm border border-black p-4">
+					<h2 class="text-center text-xl mb-4">Input Form</h2>
+					<div class="my-4">
+						<label for="name" class="inline-block w-44">Enter Name:</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							class="border-red-300 border p-2"
+							required
+						/>
+					</div>
+					<div class="my-4">
+						<label for="collegeName" class="inline-block w-44"
+							>Enter College Name:</label
+						>
+						<input
+							type="text"
+							name="collegeName"
+							id="collegeName"
+							class="border-red-300 border p-2"
+							required
+						/>
+					</div>
+					<div class="my-4">
+						<label for="location" class="inline-block w-44"
+							>Enter Location:</label
+						>
+						<input
+							type="text"
+							name="location"
+							id="location"
+							class="border-red-300 border p-2"
+							required
+						/>
+					</div>
+					<button
+						type="submit"
+						class="px-2 py-1 bg-red-500 rounded text-white font-medium"
+					>
+						Generate Card
+					</button>
+				</form>
+				<div class="generatedCard border border-black p-4 min-w-[500px]">
+					<h2 class="text-center text-xl mb-4">Generated Card</h2>
+					<div class="idCardWrapper border shadow-lg border-slate-200 hidden">
+						<div class="idCard flex justify-center items-center">
+							<div
+								class="idImage w-28 bg-blue-300 h-40 flex justify-center items-center"
+							>
+								<svg
+									class="p-6"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 448 512"
+								>
+									<!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+									<path
+										d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+									/>
+								</svg>
+							</div>
+							<div class="generalInfo w-80 p-4">
+								<p class="mb-2 font-semibold">
+									Name: <span class="cardName font-normal"></span>
+								</p>
+								<p class="mb-2 font-semibold">
+									College Name: <span class="cardCollege font-normal"></span>
+								</p>
+								<p class="font-semibold">
+									Location: <span class="cardLocation font-normal"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>made by Chergui Chihab Iddine &copy; 2024</footer>
+		</div>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
